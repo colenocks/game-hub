@@ -6,12 +6,12 @@ import GenreList from "./components/GenreList";
 import NavBar from "./components/NavBar";
 import PlatformSelector from "./components/PlatformSelector";
 import SortSelector from "./components/SortSelector";
-import { Platform } from "./hooks/useGames";
+import { IPlatform } from "./services/platform";
 import { IGenre } from "./services/genre";
 
 export interface GameQuery {
   genre: IGenre | null;
-  platform: Platform | null;
+  platform: IPlatform | null;
   sortOrder: string;
   searchText: string;
 }

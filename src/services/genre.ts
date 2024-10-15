@@ -1,4 +1,5 @@
 import axiosInstance from './api-client'
+import { FetchResponse } from '../hooks/useData';
 
 export interface IGenre {
     id: number;
@@ -9,13 +10,6 @@ export interface IGenre {
     description?: string;
 }
 
-export interface IGenreList {
-    count: number
-    next?: string
-    previous?: string
-    results: IGenre[]
-}
-
 class Genre {
     private endpoint: string
 
@@ -24,7 +18,7 @@ class Genre {
     }
 
     getAll = async () => {
-        return axiosInstance.get<IGenreList>(this.endpoint).then((res) => res.data)
+        return axiosInstance.get<FetchResponse<IGenre>>(this.endpoint).then((res) => res.data)
     }
 }
 
