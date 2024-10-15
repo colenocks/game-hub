@@ -1,5 +1,4 @@
-import { FetchResponse } from '../hooks/useData';
-import axiosInstance from './api-client'
+import axiosInstance, { FetchResponse } from './api-client';
 
 export interface IPlatform {
     id: number;

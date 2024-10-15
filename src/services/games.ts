@@ -1,6 +1,5 @@
 import { IGameQuery } from '../App';
-import { FetchResponse } from '../hooks/useData';
-import axiosInstance from './api-client';
+import axiosInstance, { FetchResponse } from './api-client';
 import { IPlatform } from './platform';
 
 export interface IGame {

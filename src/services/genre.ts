@@ -1,5 +1,4 @@
-import axiosInstance from './api-client'
-import { FetchResponse } from '../hooks/useData';
+import axiosInstance, { FetchResponse } from './api-client';
 
 export interface IGenre {
     id: number;

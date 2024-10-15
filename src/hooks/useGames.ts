@@ -1,12 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import { IGameQuery } from "../App";
-import { IGame } from "../services/games";
-import { FetchResponse } from "./useData";
-import GameService from "../services/games"
+import { FetchResponse } from "../services/api-client";
+import GameService, { IGame } from "../services/games";
 
 const gameService = new GameService()
-
-
 
 const useGames = (gameQuery: IGameQuery) => useQuery<FetchResponse<IGame>, Error>({
   queryKey: ["games", gameQuery],
