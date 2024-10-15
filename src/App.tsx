@@ -9,7 +9,7 @@ import SortSelector from "./components/SortSelector";
 import { IPlatform } from "./services/platform";
 import { IGenre } from "./services/genre";
 
-export interface GameQuery {
+export interface IGameQuery {
   genre: IGenre | null;
   platform: IPlatform | null;
   sortOrder: string;
@@ -17,7 +17,7 @@ export interface GameQuery {
 }
 
 function App() {
-  const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
+  const [gameQuery, setGameQuery] = useState<IGameQuery>({} as IGameQuery);
 
   return (
     <Grid
